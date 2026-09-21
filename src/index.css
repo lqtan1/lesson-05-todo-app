@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { min-width: 320px; }
+  body { @apply m-0 bg-paper font-sans text-ink antialiased; }
+  button, input { font: inherit; }
+  button:focus-visible, input:focus-visible { @apply outline-none ring-4 ring-teal/20; }
+}
+
+@layer components {
+  .app-shell { background: radial-gradient(circle at 15% 0%, rgba(245, 196, 81, .32), transparent 34%), radial-gradient(circle at 100% 20%, rgba(22, 139, 130, .14), transparent 30%), #f5f3ed; }
+  .dark .app-shell { background: radial-gradient(circle at 15% 0%, rgba(245, 196, 81, .08), transparent 34%), #17202a; }
+}
